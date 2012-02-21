@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>zealot83/ngx_http_extended_status_module @ GitHub</title>
+
+  <style type="text/css">
+    body {
+      margin-top: 1.0em;
+      background-color: #58b3fc;
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+      color: #000000;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+    h1 { font-size: 3.8em; color: #a74c03; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.5em; color: #a74c03; }
+    h3 { text-align: center; color: #a74c03; }
+    a { color: #a74c03; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+    pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+  </style>
+</head>
+
+<body>
+  <a href="https://github.com/zealot83/ngx_http_extended_status_module"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+
+    <div class="download">
+      <a href="https://github.com/zealot83/ngx_http_extended_status_module/zipball/master">
+        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
+      <a href="https://github.com/zealot83/ngx_http_extended_status_module/tarball/master">
+        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+    </div>
+
+    <h1><a href="https://github.com/zealot83/ngx_http_extended_status_module">ngx_http_extended_status_module</a>
+      <span class="small">by <a href="https://github.com/zealot83">zealot83</a></span></h1>
+
+    <div class="description">
+      This module is a extended module for Nginx status.
+*Note: this module is not distributed with the Nginx source.
+       Installation instructions can be found below.*
+    </div>
+
+    
+      <p>-- How to configure this module --
+
+Directive:
+
+extended_status
+  syntax: extended_status on|off;
+  default: off
+  context: http, server, location
+
+Example:
+    location = /extended_status {
+        extended_status on;
+    }
+    location = /tablesort.min.js {
+        root html;
+    }</p>
+    
+
+    
+
+    
+      <h2>Install</h2>
+      <p>Before compile, please apply patch to Nginx core according to the part of "How to patch Nginx core"
+./configure --add-module=[nginx_extended_status_module source dirctory]
+make
+make install
+
+-- How to patch Nginx core --
+For Nginx 0.8.54 (or 0.8.55),
+patch -p0 < extended_status-0.8.54.patch
+
+For Nginx 1.0.11,
+patch -p0 < extended_status-1.0.11.patch
+
+</p>
+    
+
+    
+      <h2>License</h2>
+      <p>This module borrowed a lot of codes from stub_status module of Nginx. This part of code is copyrighted by Igor Sysoev.
+
+This module is licensed under the BSD license.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+    
+
+    
+      <h2>Authors</h2>
+      <p>Youngseok Choi(zealot33@gmail.com)<br/>李金虎(beagem@163.com)      <br/><br/>* The original author of this module is Heumgeun Kang(heumgeun.kang@nhn.com).</p>
+    
+
+    
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="https://github.com/zealot83/ngx_http_extended_status_module/zipball/master">zip</a> or
+      <a href="https://github.com/zealot83/ngx_http_extended_status_module/tarball/master">tar formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/zealot83/ngx_http_extended_status_module</pre>
+    </p>
+
+    <div class="footer">
+      get the source code on GitHub : <a href="https://github.com/zealot83/ngx_http_extended_status_module">zealot83/ngx_http_extended_status_module</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
