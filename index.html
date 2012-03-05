@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <meta charset='utf-8'>
@@ -16,7 +16,7 @@
       margin: 0 auto;
       width: 700px;
     }
-    h1 { font-size: 3.8em; color: #a74c03; margin-bottom: 3px; }
+    h1 { font-size: 3.0em; color: #a74c03; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
     h2 { font-size: 1.5em; color: #a74c03; }
@@ -46,27 +46,25 @@
       <span class="small">by <a href="https://github.com/zealot83">zealot83</a></span></h1>
 
     <div class="description">
-      This module is a extended module for Nginx status.
-*Note: this module is not distributed with the Nginx source.
-       Installation instructions can be found below.*
+      This module is a extended module for Nginx status. <br/>
+* Note: this module is not distributed with the Nginx source.
+       Installation instructions can be found below. * 
     </div>
 
-    
-      <p>-- How to configure this module --
+    <h2>Directive</h2>
+<p>-- How to configure this module --</p>
 
-Directive:
-
-extended_status
-  syntax: extended_status on|off;
-  default: off
-  context: http, server, location
-
-Example:
-    location = /extended_status {
-        extended_status on;
-    }
-    location = /tablesort.min.js {
-        root html;
+extended_status<br>
+  syntax: extended_status on|off;<br>
+  default: off<br>
+  context: http, server, location<br>
+<br>
+Example:<br>
+    location = /extended_status {<br>
+        extended_status on;<br>
+    }<br>
+    location = /tablesort.min.js {<br>
+        root html;<br>
     }</p>
     
 
@@ -74,17 +72,18 @@ Example:
 
     
       <h2>Install</h2>
-      <p>Before compile, please apply patch to Nginx core according to the part of "How to patch Nginx core"
-./configure --add-module=[nginx_extended_status_module source dirctory]
-make
-make install
-
--- How to patch Nginx core --
-For Nginx 0.8.54 (or 0.8.55),
-patch -p0 < extended_status-0.8.54.patch
-
-For Nginx 1.0.11,
-patch -p0 < extended_status-1.0.11.patch
+      <p>Before compile, please apply patch to Nginx core according to the part of "How to patch Nginx core"<br>
+./configure --add-module=[nginx_extended_status_module source dirctory] <br>
+make<br>
+make install<br>
+<br>
+-- How to patch Nginx core --<br>
+<br>
+For Nginx 0.8.54 (or 0.8.55),<br>
+patch -p0 < extended_status-0.8.54.patch<br>
+<br>
+For Nginx 1.0.11,<br>
+patch -p0 < extended_status-1.0.11.patch<br>
 
 </p>
     
