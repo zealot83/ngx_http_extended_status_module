@@ -1,0 +1,38 @@
+Nginx extended_status module
+
+-- Decription --
+This module is a extended module for Nginx status.
+*Note: this module is not distributed with the Nginx source.
+       Installation instructions can be found below.*
+
+-- How to build and install --
+Before compile, please apply patch to Nginx core according to the part of "How to patch Nginx core"
+./configure --add-module=[nginx_extended_status_module source dirctory]
+make
+make install
+
+-- How to configure this module --
+
+Directive:
+
+extended_status
+  syntax: extended_status on|off;
+  default: off
+  context: http, server, location
+
+Example:
+    location = /extended_status {
+        extended_status on;
+    }
+    location = /tablesort.min.js {
+        root html;
+    }
+
+-- How to patch Nginx core --
+For Nginx 0.8.54 (or 0.8.55),
+patch -p0 < extended_status-0.8.54.patch
+
+For Nginx 1.0.11,
+patch -p0 < extended_status-1.0.11.patch
+
+
